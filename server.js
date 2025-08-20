@@ -1,6 +1,24 @@
 // Plagiarism Checker — My Ultra Tools
 // Advanced UI + SEO + 10k limit + 50+ languages + PDF/CSV Export
 // Ready for Render free hosting and Blogger iframe embedding
+const express = require("express");
+const path = require("path");
+const app = express();
+
+// Static files serve karna (index.html, script.js, css, etc.)
+app.use(express.static(path.join(__dirname)));
+
+// Default route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// Render ka PORT use karna (important)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
 const express = require('express');
 const bodyParser = require('body-parser');
