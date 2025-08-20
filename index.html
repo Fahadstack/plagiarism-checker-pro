@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Plagiarism Checker | My Ultra Tools</title>
+  <meta name="description" content="Free plagiarism checker by My Ultra Tools. Check up to 10,000 words, support for 50+ languages, mobile responsive, dark mode, PDF/CSV export." />
+  <meta name="keywords" content="plagiarism checker, duplicate content, SEO tools, content originality, plagiarism detector, my ultra tools" />
+  <link rel="canonical" href="https://myultratools.blogspot.com/" />
+  <meta property="og:title" content="Free Plagiarism Checker | My Ultra Tools" />
+  <meta property="og:description" content="Check plagiarism online free with PDF/CSV export and dark mode. 10k words and 50+ language detection." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="My Ultra Tools" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "My Ultra Tools Plagiarism Checker",
+    "applicationCategory": "SEOApplication",
+    "operatingSystem": "Any",
+    "url": "https://myultratools.blogspot.com/",
+    "offers": { "@type": "Offer", "price": "0" },
+    "creator": { "@type": "Organization", "name": "My Ultra Tools" }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn .35s ease-in-out; }
+    @keyframes fadeIn { from {opacity:0; transform:translateY(6px)} to {opacity:1; transform:translateY(0)} }
+    .prose h2 { font-weight: 700; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900 transition-colors duration-200" id="body">
+  <div class="max-w-6xl mx-auto p-4 sm:p-6">
+    <header class="flex items-center justify-between mb-4">
+      <h1 class="text-2xl sm:text-3xl font-bold">Plagiarism Checker</h1>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="px-3 py-2 rounded-xl border shadow-sm text-sm">Toggle Dark</button>
+      </div>
+    </header>
+
+    <section class="bg-white rounded-2xl shadow p-4 sm:p-6 space-y-4 fade-in" id="card">
+      <div class="grid sm:grid-cols-2 gap-2">
+        <label for="text" class="font-semibold">Enter Text (max 10,000 words)</label>
+        <div class="flex items-center justify-end gap-3">
+          <span class="text-sm opacity-70">Detected Lang:</span>
+          <span id="langInfo" class="text-sm font-medium">—</span>
+          <span id="wordCount" class="text-sm opacity-70">0 / 10,000</span>
+        </div>
+      </div>
+      <textarea id="text" class="w-full h-[46vh] sm:h-[52vh] resize-y p-4 rounded-xl border focus:outline-none focus:ring focus:ring-indigo-200" placeholder="Paste or type your content here..."></textarea>
+
+      <div class="grid sm:grid-cols-3 gap-3">
+        <button id="checkBtn" class="px-5 py-3 rounded-xl shadow bg-indigo-600 text-white hover:bg-indigo-700 active:scale-[.99]">Check Plagiarism</button>
+        <button id="clearBtn" class="px-5 py-3 rounded-xl shadow border">Clear</button>
+        <button id="sampleBtn" class="px-5 py-3 rounded-xl shadow border">Sample Text</button>
+      </div>
+    </section>
+
+    <section id="results" class="mt-6 hidden fade-in"></section>
+
+    <section class="mt-10 prose max-w-none">
+      <h2>About This Free Plagiarism Checker</h2>
+      <p>Use this tool to quickly find repeated or highly similar parts in your text. For web-wide plagiarism checks, connect an external provider in the backend.</p>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Up to 10,000 words per check</li>
+        <li>50+ language detection</li>
+        <li>PDF and CSV export</li>
+        <li>Mobile responsive with Dark Mode</li>
+        <li>Advanced UI with smooth animations</li>
+      </ul>
+    </section>
+
+    <footer class="mt-10 text-center opacity-80 text-sm">
+      My Ultra Tools | All Rights Reserved
+    </footer>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
